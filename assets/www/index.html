@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"/>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/HPNeo/gmaps/master/gmaps.js">
+		<link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">        
+        <title>Fiestas Fuensanta</title>
+        <script type="text/javascript">//<![CDATA[
+            $(function(){
+                $('#slider div:gt(0)').hide();
+                setInterval(function(){
+                  $('#slider div:first-child').fadeOut(0)
+                     .next('div').fadeIn(1000)
+                     .end().appendTo('#slider');}, 4000);
+            });
+            //]]></script>
+            
+    </head>
+    
+    <body>
+        <header id="header">
+        	
+            <div id="title">
+                <img id="btn_menu" src="img/more.png" alt="menu" onclick="showMenu()" width="32" height="32"/>
+                FIESTAS FUENSANTA
+                <img src='img/escudo.png' alt='escudo' class='escudo'/>
+            </div>
+        </header>
+        
+        <div id="menu">
+           <ul>
+           	<li>
+           		<a href="#"><img src="img/home.png" alt="home" width="32" height="32" onclick="home();showMenu();"/></a>
+                <br/>
+         		Inicio	
+           	</li>
+           	<li>
+           		<a href="#"><img src="img/calendar.png" alt="calendar"  width="32" height="32" onclick="schedule()"/></a>
+                <br/>
+           		Agenda
+           	</li>
+           	<li>
+           		<a href="#"><img src="img/cocktail.png" alt="coctail" width="32" height="32" onclick="events()"/></a>
+                <br/>
+           		Eventos
+           	</li>
+           	<li>
+           		<a href="#"><img src="img/facebook.png" alt="locations" width="32" height="32" onclick="map()"/></a>
+                <br/>
+           		Lugares
+           	</li>
+           </ul> 
+        </div>
+        
+        <div id="content">
+            
+        </div>
+        
+           
+        <script>
+    	   home();
+        </script>
+        
+    </body>
+</html>
